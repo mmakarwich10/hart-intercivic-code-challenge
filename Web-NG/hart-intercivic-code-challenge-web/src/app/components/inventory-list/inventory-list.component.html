@@ -1,0 +1,11 @@
+<div>
+    <h4>Inventory</h4>
+    <div class="row">
+        <div class="col-md-1">Description</div>
+        <div class="col-md-1">Count</div>
+    </div>
+    <div class="row" *ngFor="let item of inventoryItems">
+        <div class="col-md-1">{{item.description}}</div>
+        <div class="col-md-1">{{item.count}}</div>
+    </div>
+</div>
