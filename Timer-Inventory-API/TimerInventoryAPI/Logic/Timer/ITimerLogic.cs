@@ -10,5 +10,6 @@ namespace Logic.Timer
     public interface ITimerLogic
     {
         TimeHmsDto GetInitialValue();
+        bool TimerHasFinished();
     }
 }

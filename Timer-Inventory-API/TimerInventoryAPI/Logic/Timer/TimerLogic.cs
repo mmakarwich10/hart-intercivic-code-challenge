@@ -16,5 +16,11 @@ namespace Logic.Timer
         {
             return _timerData.GetInitialValue();
         }
+
+        public bool TimerHasFinished()
+        {
+            bool processSuccessful = true;
+            return processSuccessful;
+        }
     }
 }
