@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerInventoryAPIWeb", "TimerInventoryAPIWeb\TimerInventoryAPIWeb.csproj", "{6CD4184C-A7D3-4385-B1E8-DF31CB9F61C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{1104F6A6-9E9F-46EA-A77D-F1CE98359FDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6CD4184C-A7D3-4385-B1E8-DF31CB9F61C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD4184C-A7D3-4385-B1E8-DF31CB9F61C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD4184C-A7D3-4385-B1E8-DF31CB9F61C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1104F6A6-9E9F-46EA-A77D-F1CE98359FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1104F6A6-9E9F-46EA-A77D-F1CE98359FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1104F6A6-9E9F-46EA-A77D-F1CE98359FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1104F6A6-9E9F-46EA-A77D-F1CE98359FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
