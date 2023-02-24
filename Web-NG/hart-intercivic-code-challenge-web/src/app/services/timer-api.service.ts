@@ -10,7 +10,7 @@ export class TimerApiService extends BaseTimerInventoryApiService {
     private _timerApiPath: string = `${this._timerInventoryApiPath}timer/`;
     
     public getTimerInitialValue(): Observable<TimeHMS> {
-        return of({ hours: 0, minutes: 2, seconds: 0 });
-        //return this.get<TimeHMS>(`${this._timerApiPath}initial-value`);
+        //return of({ hours: 0, minutes: 2, seconds: 0 });
+        return this.get<TimeHMS>(`${this._timerApiPath}initial-value`);
     }
 }
