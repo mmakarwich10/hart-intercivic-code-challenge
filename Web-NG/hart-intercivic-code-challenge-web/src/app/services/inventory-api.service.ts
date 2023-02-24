@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { InventoryItem } from "../models/inventory-item";
-import { BaseTimerInventoryApiService } from "./base-api.service";
+import { BaseApiService } from "./base-api.service";
 
 @Injectable({
     providedIn: 'root'
 })
-export class InventoryApiService extends BaseTimerInventoryApiService {
-    private _inventoryApiPath: string = `${this._timerInventoryApiPath}inventory/`;
+export class InventoryApiService extends BaseApiService {
+    private _inventoryApiPath: string = `${this._apiBaseUrl}inventory/`;
 
     public getAllInventory(): Observable<InventoryItem[]> {
         return of([

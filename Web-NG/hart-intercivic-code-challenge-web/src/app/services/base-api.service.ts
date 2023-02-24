@@ -4,6 +4,6 @@ import { Injectable } from "@angular/core";
 @Injectable({
     providedIn: 'root'
 })
-export class BaseTimerInventoryApiService extends HttpClient {
-    protected _timerInventoryApiPath: string = "https://localhost:7030/api/";
+export class BaseApiService extends HttpClient {
+    protected _apiBaseUrl: string = "https://localhost:7030/api/";
 }
