@@ -14,10 +14,16 @@ namespace TimerInventoryAPIWeb.Controllers
             TimeHMSDto returnedTime = new TimeHMSDto
             {
                 Hours = 0,
-                Minutes = 2,
-                Seconds = 0
+                Minutes = 0,
+                Seconds = 5
             };
             return Ok(returnedTime);
+        }
+
+        [HttpPost("finished")]
+        public IActionResult TimerFinished()
+        {
+            return Ok(true);
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { InventoryItem } from "../models/inventory-item";
-import { BaseTimerInventoryApiService } from "./base-timer-inventory-api.service";
+import { BaseTimerInventoryApiService } from "./base-api.service";
 
 @Injectable({
     providedIn: 'root'

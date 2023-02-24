@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Subscription, timer } from "rxjs";
-import { NotificationApiService } from "src/app/services/notification-api.service";
 import { TimerApiService } from "src/app/services/timer-api.service";
 
 @Component({
@@ -18,8 +17,7 @@ export class TimerComponent implements OnInit {
     private _timerSub: Subscription = new Subscription();
 
     constructor(
-        private _timerApiService: TimerApiService,
-        private _notificationApiService: NotificationApiService
+        private _timerApiService: TimerApiService
     ) {}
 
     public startTimer() {
@@ -30,7 +28,7 @@ export class TimerComponent implements OnInit {
         this._timerSub = oTimer.subscribe(x => {
             if (this.seconds === 0 && this.minutes === 0 && this.hours === 0) {
                 this.pauseTimer();
-                this._notificationApiService.sendTimerIsFinished().subscribe(response => {
+                this._timerApiService.sendTimerIsFinished().subscribe(response => {
                     if (response != undefined && response != null) {
                         this.successfulNotification = response;
                     }
