@@ -7,13 +7,9 @@ import { BaseApiService } from "./base-api.service";
     providedIn: 'root'
 })
 export class InventoryApiService extends BaseApiService {
-    private _inventoryApiPath: string = `${this._apiBaseUrl}inventory/`;
+    private _inventoryApiUrl: string = `${this._apiBaseUrl}inventory/`;
 
     public getAllInventory(): Observable<InventoryItem[]> {
-        return of([
-            { description: "Table", count: 2 },
-            { description: "Chair", count: 18 }
-        ]);
-        //return this.get<InventoryItem[]>(this._inventoryApiPath);
+        return this.get<InventoryItem[]>(this._inventoryApiUrl);
     }
 }
