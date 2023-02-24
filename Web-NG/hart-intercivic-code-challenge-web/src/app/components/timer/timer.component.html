@@ -4,5 +4,7 @@
     </h2>
 </div>
 <div>
-    <button (click)="startTimer()">Start Timer</button>
+    <button *ngIf="!timerIsRunning" (click)="startTimer()">Start Timer</button>
+    <button *ngIf="timerIsRunning" (click)="pauseTimer()">Pause Timer</button>
+    <span *ngIf="successfulNotification">Timer has finished!</span>
 </div>
