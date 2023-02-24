@@ -11,7 +11,7 @@ namespace TimerInventoryAPIWeb.Controllers
         [HttpGet("initial-value")]
         public IActionResult GetInitialValue()
         {
-            TimeHMSDto returnedTime = new TimeHMSDto
+            TimeHmsDto returnedTime = new TimeHmsDto
             {
                 Hours = 0,
                 Minutes = 0,
