@@ -1,3 +1,6 @@
+using Data.Timer;
+using Logic.Timer;
+
 var MyAllowSpecificOrigin = "_myAllowSpecificOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +19,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<ITimerData, TimerData>();
+
+builder.Services.AddScoped<ITimerLogic, TimerLogic>();
 
 var app = builder.Build();
 

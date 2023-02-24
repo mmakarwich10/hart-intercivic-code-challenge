@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Logic.Timer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -8,15 +9,17 @@ namespace TimerInventoryAPIWeb.Controllers
     [ApiController]
     public class TimerController : ControllerBase
     {
+        private ITimerLogic _timerLogic;
+
+        public TimerController(ITimerLogic timerLogic) 
+        { 
+            _timerLogic = timerLogic;
+        }
+
         [HttpGet("initial-value")]
         public IActionResult GetInitialValue()
         {
-            TimeHmsDto returnedTime = new TimeHmsDto
-            {
-                Hours = 0,
-                Minutes = 0,
-                Seconds = 5
-            };
+            TimeHmsDto returnedTime = _timerLogic.GetInitialValue();
             return Ok(returnedTime);
         }
 

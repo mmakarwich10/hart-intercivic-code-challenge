@@ -11,7 +11,7 @@ namespace Data.Timer
             TimeHmsDto value;
 
 
-            using (StreamReader file = new StreamReader(@"..\Storage\Timer.xml"))
+            using (StreamReader file = new StreamReader(@"..\Data\Storage\Timer.xml"))
             {
                 value = (TimeHmsDto)(reader.Deserialize(file) ?? new TimeHmsDto());
             }
