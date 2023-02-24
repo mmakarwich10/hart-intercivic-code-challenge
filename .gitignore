@@ -4,3 +4,4 @@
 
 **/.vs/*
 **/Timer-Inventory-API/TimerInventoryAPI/TimerInventoryAPIWeb/obj/*
+**/Timer-Inventory-API/TimerInventoryAPI/TimerInventoryAPIWeb/bin/Debug/*
