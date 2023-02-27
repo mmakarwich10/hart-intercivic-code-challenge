@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<InventoryItems>
+<InventoryTable>
   <InventoryItem>
     <Id>1</Id>
     <Description>Table</Description>
@@ -10,4 +10,4 @@
     <Description>Chair</Description>
     <Count>18</Count>
   </InventoryItem>
-</InventoryItems>
+</InventoryTable>

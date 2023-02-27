@@ -1,4 +1,6 @@
+using Data.Inventory;
 using Data.Timer;
+using Logic.Inventory;
 using Logic.Timer;
 
 var MyAllowSpecificOrigin = "_myAllowSpecificOrigin";
@@ -21,8 +23,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ITimerData, TimerData>();
+builder.Services.AddScoped<IInventoryData, InventoryData>();
 
 builder.Services.AddScoped<ITimerLogic, TimerLogic>();
+builder.Services.AddScoped<IInventoryLogic, InventoryLogic>();
 
 var app = builder.Build();
 

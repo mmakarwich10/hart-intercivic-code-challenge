@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Logic.Inventory;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -8,14 +9,17 @@ namespace TimerInventoryAPIWeb.Controllers
     [ApiController]
     public class InventoryController : ControllerBase
     {
+        private IInventoryLogic _inventoryLogic;
+
+        public InventoryController(IInventoryLogic inventoryLogic)
+        {
+            _inventoryLogic = inventoryLogic;
+        }
+
         [HttpGet("")]
         public IActionResult GetAllInventory()
         {
-            List<InventoryItemDto> resultList = new List<InventoryItemDto>
-            {
-                new InventoryItemDto { Id = 1, Description = "Table", Count = 2 },
-                new InventoryItemDto { Id = 2, Description = "Chair", Count = 18 }
-            };
+            List<InventoryItemDto> resultList = _inventoryLogic.GetAllInventory();
             return Ok(resultList);
         }
     }
