@@ -10,7 +10,6 @@ namespace Data.Timer
             XmlSerializer reader = new XmlSerializer(typeof(TimeHmsDto));
             TimeHmsDto value;
 
-
             using (StreamReader file = new StreamReader(@"..\Data\Storage\Timer.xml"))
             {
                 value = (TimeHmsDto)(reader.Deserialize(file) ?? new TimeHmsDto());

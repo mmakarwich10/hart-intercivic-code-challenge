@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InventoryItems>
+  <InventoryItem>
+    <Id>1</Id>
+    <Description>Table</Description>
+    <Count>2</Count>
+  </InventoryItem>
+  <InventoryItem>
+    <Id>2</Id>
+    <Description>Chair</Description>
+    <Count>18</Count>
+  </InventoryItem>
+</InventoryItems>
