@@ -27,6 +27,7 @@ namespace TimerInventoryAPIWeb.Controllers
         public IActionResult TimerHasFinished()
         {
             bool processSuccessful = _timerLogic.TimerHasFinished();
+            bool test = true;
             return Ok(processSuccessful);
         }
     }
